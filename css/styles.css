@@ -1,1 +1,20 @@
-/*# sourceMappingURL=styles.css.map */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  font-family: Shrikhand;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin: 0 3%;
+}/*# sourceMappingURL=styles.css.map */

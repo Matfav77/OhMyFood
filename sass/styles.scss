@@ -1,1 +1,29 @@
 @import "./utils/variables";
+@import "./utils/mixin"
+
+
+
+
+
+
+
+body {
+    font-family: $primary-font, sans-serif;
+}
+
+h1 {
+    font-family: $titles-font;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    margin: 0 3%;
+}
