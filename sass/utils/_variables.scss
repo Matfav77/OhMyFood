@@ -1,6 +1,13 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$btn-gradient-secondaryToPrimary: linear-gradient(175deg, $secondary-color, $primary-color);
 
 $titles-font: Shrikhand;
 $primary-font: Roboto;
+
+$box-shadow-element-light: (
+    0 2px 8px lightgrey
+);
+$box-shadow-element-darker: (
+    0 2px 8px rgb(180, 180, 180))

@@ -19,74 +19,80 @@
     <header>
         <h1>ohmyfood</h1>
     </header>
-    <div><i class="fa-solid fa-location-dot"></i>Paris, Belleville</div>
-    <div>
-        <h2>Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <button>Explorer nos restaurants</button>
+
+
+    <p class="location"><i class="fa-solid fa-location-dot location__icon"></i>Paris, Belleville</p>
+    <div class="explore">
+        <h2 class="explore__title">Réservez le menu qui vous convient</h2>
+        <p class="explore__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+        <button class="explore__btn explore__btn--primary-gradient">Explorer nos restaurants</button>
     </div>
 
     <main>
         <section class="fonct-section">
             <h2>Fonctionnement</h2>
             <div class="fonct-step"> <span class="fonct-step__num">1</span> <i
-                    class="fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span>
+                    class="fa-solid fa-mobile-screen-button fonct-step__icon"></i><span
+                    class="fonct-step__txt">Choisissez un
+                    restaurant</span>
             </div>
             <div class="fonct-step"> <span class="fonct-step__num">2</span> <i
-                    class="fa-solid fa-list-ul"></i><span>Composez votre menu</span> </div>
+                    class="fa-solid fa-list-ul fonct-step__icon"></i><span class="fonct-step__txt">Composez votre
+                    menu</span> </div>
             <div class="fonct-step"> <span class="fonct-step__num">3</span> <i
-                    class="fa-solid fa-store"></i><span>Dégustez au restaurant</span> </div>
+                    class="fa-solid fa-store fonct-step__icon"></i><span class="fonct-step__txt">Dégustez
+                    au restaurant</span> </div>
         </section>
 
         <section class="rest-section">
             <h2>Restaurants </h2>
             <a href="./pages/palettedugout.html">
                 <div class="rest-card">
-                    <div class="rest-card__img"><img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jp"
-                            alt="Photo de 'La palette du goût'"></div>
-                    <div class="rest_card__bottom">
+                    <div class="rest-card__img"><img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="Photo de 'La palette du goût'"><span>Nouveau</span></div>
+                    <div class="rest-card__bottom">
                         <div class="rest-card__txt">
                             <h3>La palette du goût</h3>
                             <span>Ménilmontant</span>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart rest-card__heart"></i>
                     </div>
                 </div>
             </a><a href="./pages/noteenchantee.html">
                 <div class="rest-card">
-                    <div class="rest-card__img"><img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jp"
-                            alt="Photo de 'La note enchantée'"></div>
-                    <div class="rest_card__bottom">
+                    <div class="rest-card__img"><img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                            alt="Photo de 'La note enchantée'"><span>Nouveau</span></div>
+                    <div class="rest-card__bottom">
                         <div class="rest-card__txt">
                             <h3>La note enchantée</h3>
                             <span>Charonne</span>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart rest-card__heart"></i>
                     </div>
                 </div>
             </a><a href="./pages/alafrancaise.html">
                 <div class="rest-card">
-                    <div class="rest-card__img"><img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jp"
+                    <div class="rest-card__img"><img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                             alt="Photo de 'A la française'"></div>
-                    <div class="rest_card__bottom">
+                    <div class="rest-card__bottom">
                         <div class="rest-card__txt">
                             <h3>À la française</h3>
                             <span>Cité Rouge</span>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart rest-card__heart"></i>
                     </div>
                 </div>
             </a><a href="./pages/delicedessens.html">
                 <div class="rest-card">
                     <div class="rest-card__img"><img
-                            src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jp"
+                            src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                             alt="Photo de 'Le délice des sens'"></div>
-                    <div class="rest_card__bottom">
+                    <div class="rest-card__bottom">
                         <div class="rest-card__txt">
                             <h3>Le délice des sens</h3>
                             <span>Folie-Méricourt</span>
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart rest-card__heart"></i>
                     </div>
                 </div>
             </a>
@@ -95,12 +101,14 @@
 
     <footer>
         <div class="footer-layout">
-            <span>ohmyfood</span>
+            <p>ohmyfood</p>
             <nav class="nav">
                 <ul>
-                    <li class="nav__link"><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a>
+                    <li class="nav__link"><i class="fa-solid fa-utensils nav__icon"></i><a href="#">Proposer un
+                            restaurant</a>
                     </li>
-                    <li class="nav__link"><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a>
+                    <li class="nav__link"><i class="fa-solid fa-handshake-angle nav__icon"></i><a href="#">Devenir
+                            partenaire</a>
                     </li>
                     <li class="nav__link"><a href="#">Mentions légales</a></li>
                     <li class="nav__link"><a href="mailto:#">Contact</a></li>

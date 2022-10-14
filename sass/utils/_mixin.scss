@@ -3,3 +3,14 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+@mixin fonct-num-step {
+    background-color: $primary-color;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 0.3rem 0.5rem;
+    position: absolute;
+    left: -12px;
+    top: 20px;
+}
