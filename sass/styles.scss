@@ -32,15 +32,15 @@ header {
     position: relative;
 }
 
-h1 {
-    font-family: $titles-font, cursive;
-    margin: 1rem auto 0.5rem;
+img {
+    width: 30%;
+    margin: 1.5rem auto 1rem;
 }
 
 .return-arrow {
     font-size: 1.3rem;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 20px;
 
 }
@@ -83,6 +83,11 @@ h1 {
         &--primary-gradient {
             background: $btn-gradient-secondaryToPrimary;
         }
+
+        &:hover {
+            background: $btn-gradient-secondaryToPrimary-darker;
+            box-shadow: $box-shadow-dark;
+        }
     }
 }
 
@@ -104,7 +109,7 @@ h1 {
     position: relative;
     display: flex;
     justify-content: center;
-    box-shadow: $box-shadow-element-light;
+    box-shadow: $box-shadow-light;
 
     &__num {
         @include fonct-num-step;
@@ -112,6 +117,14 @@ h1 {
 
     &__txt {
         margin: auto;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 36%);
+    }
+
+    &:hover .fonct-step__icon {
+        color: $primary-color;
     }
 }
 
@@ -130,8 +143,12 @@ h1 {
     background-color: white;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    box-shadow: $box-shadow-element-darker;
+    box-shadow: $box-shadow-dark;
     overflow: hidden;
+
+    &:hover {
+        box-shadow: $box-shadow-darker;
+    }
 
     &__img {
         height: 170px;
@@ -172,11 +189,34 @@ h1 {
         span {
             margin: 0;
         }
+
+
     }
 
-    &__heart {
-        font-size: 1.5rem;
+    &__heart-section {
+        position: relative;
     }
+
+    &__outer-heart {
+        font-size: 1.5rem;
+
+        &:hover+.rest-card__inner-heart {
+            transform: scale(1);
+            transition: all 0.5s cubic-bezier(0, 3, 1, .76);
+        }
+    }
+
+    &__inner-heart {
+        background: $heart-gradient;
+        background-clip: text;
+        color: transparent;
+        position: absolute;
+        font-size: 1.5rem;
+        right: 0;
+        transform: scale(0);
+        transition: all 0s;
+    }
+
 }
 
 // ********** RESTAURANTS **********
@@ -213,7 +253,7 @@ h1 {
         justify-content: space-between;
         align-items: center;
 
-        h2 {
+        h1 {
             font-family: Shrikhand, cursive;
             font-weight: normal;
         }
@@ -241,25 +281,30 @@ h1 {
             position: absolute;
         }
 
-        h3 {
+        h2 {
+            font-size: 1.3rem;
+            font-weight: normal;
             margin-bottom: 0.3rem;
         }
     }
+}
 
-    &__item {
-        background-color: white;
-        height: 3.2rem;
-        box-sizing: border-box;
-        border-radius: 10px;
+.menu-item {
+    background-color: white;
+    height: 3.2rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: $box-shadow-light;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &__txt {
         padding: 0.5rem;
-        margin-bottom: 1rem;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-
-        div {
-            max-width: 85%;
-        }
+        flex: 1;
+        @include text-overflow;
 
         p:nth-child(1) {
             font-weight: bold;
@@ -272,25 +317,61 @@ h1 {
             margin: 0;
             @include text-overflow;
         }
+    }
 
-        span {
-            font-weight: bold;
-            align-self: flex-end;
-            margin-right: 1rem;
-        }
+    &__price {
+        font-weight: bold;
+        align-self: flex-end;
+        margin: 0 1rem .5rem auto;
+    }
 
+    &__checked {
+        background-color: $tertiary-color;
+        width: 2rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -4rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fa-check {
+        background-color: white;
+        color: $tertiary-color;
+        padding: 4px;
+        border-radius: 50%;
+        transform: translateX(4rem) rotate(-720deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover .menu-item__checked {
+        margin-right: 0;
+    }
+
+    &:hover .fa-check {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    &:hover .menu-item__price {
+        transform: translateX(0);
     }
 
 }
 
 .order-btn {
     @include btn-gradient;
-    padding: 0.8rem 3 rem;
+    padding: 0.8rem 3rem;
     display: block;
     margin: auto;
 
     &--primary-gradient {
         background: $btn-gradient-secondaryToPrimary;
+    }
+
+    &:hover {
+        background: $btn-gradient-secondaryToPrimary-darker;
+        box-shadow: $box-shadow-dark;
     }
 }
 
