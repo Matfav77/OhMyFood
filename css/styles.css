@@ -23,11 +23,19 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 h1 {
   font-family: Shrikhand, cursive;
   margin: 1rem auto 0.5rem;
+}
+
+.return-arrow {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .location {
@@ -55,11 +63,11 @@ h1 {
   font-weight: bold;
 }
 .explore__btn {
-  padding: 0.8rem;
   border: none;
   border-radius: 4rem;
   color: white;
   box-shadow: 0 2px 8px rgb(180, 180, 180);
+  padding: 0.8rem 1rem;
 }
 .explore__btn--primary-gradient {
   background: linear-gradient(175deg, #FF79DA, #9356DC);
@@ -149,6 +157,108 @@ h1 {
 }
 .rest-card__heart {
   font-size: 1.5rem;
+}
+
+.rest-main {
+  background-color: rgb(248, 248, 248);
+}
+
+.menu {
+  padding: 2rem 1.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  position: relative;
+  bottom: 2rem;
+  background-color: inherit;
+}
+.menu__img {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.menu__img img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__title h2 {
+  font-family: Shrikhand, cursive;
+  font-weight: normal;
+}
+.menu__title i {
+  font-size: 1.5rem;
+}
+
+.menu-part {
+  width: 100%;
+  margin: 2rem 0;
+}
+.menu-part__title {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.menu-part__title::after {
+  content: "";
+  border-top: 3px solid #99E2D0;
+  width: 3rem;
+  position: absolute;
+}
+.menu-part__title h3 {
+  margin-bottom: 0.3rem;
+}
+.menu-part__item {
+  background-color: white;
+  height: 3.2rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.menu-part__item div {
+  max-width: 85%;
+}
+.menu-part__item p:nth-child(1) {
+  font-weight: bold;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-part__item p:nth-child(2) {
+  font-size: 0.9rem;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-part__item span {
+  font-weight: bold;
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+
+.order-btn {
+  border: none;
+  border-radius: 4rem;
+  color: white;
+  box-shadow: 0 2px 8px rgb(180, 180, 180);
+  padding: 0.8rem 3 rem;
+  display: block;
+  margin: auto;
+}
+.order-btn--primary-gradient {
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
 }
 
 footer {
