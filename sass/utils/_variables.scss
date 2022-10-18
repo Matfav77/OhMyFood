@@ -2,8 +2,6 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 
-$btn-gradient-secondaryToPrimary: linear-gradient(175deg, $secondary-color, $primary-color);
-$btn-gradient-secondaryToPrimary-darker: linear-gradient(175deg, darken($secondary-color, 10%), darken($primary-color, 10%));
 $heart-gradient: linear-gradient($primary-color, $secondary-color);
 
 $titles-font: Shrikhand;

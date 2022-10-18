@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+img {
+    width: 200px;
+    margin: 1.5rem auto 1rem;
+}
+
+.return-arrow {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+}

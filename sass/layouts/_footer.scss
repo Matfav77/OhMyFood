@@ -1,0 +1,30 @@
+footer {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.footer-layout {
+    padding: 1.5rem 1.5rem;
+
+    p {
+        font-family: $titles-font, cursive;
+        font-size: 1.2rem;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+}
+
+.nav {
+    &__link {
+        margin: 0.5rem 0;
+    }
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+}

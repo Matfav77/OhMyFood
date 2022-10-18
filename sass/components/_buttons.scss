@@ -1,0 +1,33 @@
+$btn-gradient-secondaryToPrimary: linear-gradient(175deg, $secondary-color, $primary-color);
+$btn-gradient-secondaryToPrimary-darker: linear-gradient(175deg, darken($secondary-color, 10%), darken($primary-color, 10%));
+
+
+.explore__btn {
+    @include btn-gradient;
+    padding: 0.8rem 1rem;
+
+    &--primary-gradient {
+        background: $btn-gradient-secondaryToPrimary;
+    }
+
+    &:hover {
+        background: $btn-gradient-secondaryToPrimary-darker;
+        box-shadow: $box-shadow-dark;
+    }
+}
+
+.order-btn {
+    @include btn-gradient;
+    padding: 0.8rem 3rem;
+    display: block;
+    margin: auto;
+
+    &--primary-gradient {
+        background: $btn-gradient-secondaryToPrimary;
+    }
+
+    &:hover {
+        background: $btn-gradient-secondaryToPrimary-darker;
+        box-shadow: $box-shadow-dark;
+    }
+}
