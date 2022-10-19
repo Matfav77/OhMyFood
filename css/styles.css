@@ -105,6 +105,118 @@ footer {
           box-shadow: 0 2px 8px rgb(180, 180, 180);
 }
 
+@-webkit-keyframes slide-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.menu-item:nth-of-type(2) {
+  -webkit-animation: 1.2s ease-in-out 0.4s both slide-in;
+          animation: 1.2s ease-in-out 0.4s both slide-in;
+}
+
+.menu-item:nth-of-type(3) {
+  -webkit-animation: 1.2s ease-in-out 0.6s both slide-in;
+          animation: 1.2s ease-in-out 0.6s both slide-in;
+}
+
+.menu-item:nth-of-type(4) {
+  -webkit-animation: 1.2s ease-in-out 0.8s both slide-in;
+          animation: 1.2s ease-in-out 0.8s both slide-in;
+}
+
+.menu-item:nth-of-type(5) {
+  -webkit-animation: 1.2s ease-in-out 1s both slide-in;
+          animation: 1.2s ease-in-out 1s both slide-in;
+}
+
+@-webkit-keyframes hide-page {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-page {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes loading-spinner {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(-2rem, -2rem);
+            transform: translate(-2rem, -2rem);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  75% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes loading-spinner {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(-2rem, -2rem);
+            transform: translate(-2rem, -2rem);
+  }
+  50% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  75% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
 .location {
   margin: 0;
   padding: 1rem;

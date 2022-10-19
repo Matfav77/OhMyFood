@@ -1,0 +1,19 @@
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Starting loop at 2 as first div in the parent is the title of the menu part, and does not contain the 'menu-item' class 
+
+@for $i from 2 through 5 {
+    .menu-item:nth-of-type(#{$i}) {
+        animation: 1.2s ease-in-out #{$i * 0.2}s both slide-in;
+    }
+}
