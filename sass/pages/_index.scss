@@ -1,0 +1,153 @@
+.location {
+    margin: 0;
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    position: relative;
+
+    &__icon {
+        position: relative;
+        right: 1rem;
+    }
+}
+
+.explore {
+    width: 100vw;
+    padding: 1.5rem 1rem 2.5rem;
+    box-sizing: border-box;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+
+    &__title {
+        font-weight: bold;
+    }
+}
+
+
+.fonct-section {
+    margin: 3rem 1.5rem;
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.fonct-step {
+    background-color: rgb(248, 248, 248);
+    border-radius: 1rem;
+    margin-left: 0.7rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: $box-shadow-light;
+
+    &__num {
+        @include fonct-num-step;
+    }
+
+    &__txt {
+        margin: auto;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 36%);
+    }
+
+    &:hover .fonct-step__icon {
+        color: $primary-color;
+    }
+}
+
+
+
+.rest-section {
+    padding: 3rem 1.5rem;
+    background-color: rgb(248, 248, 248);
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.rest-card {
+    background-color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: $box-shadow-dark;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: $box-shadow-darker;
+    }
+
+    &__img {
+        height: 170px;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        span {
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 40%);
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 0.3rem 0.4rem;
+            position: absolute;
+            z-index: 2;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+
+        h3 {
+            margin: 0 0 0.2rem;
+        }
+
+        span {
+            margin: 0;
+        }
+
+
+    }
+
+    &__heart-section {
+        position: relative;
+
+        &:hover .rest-card__inner-heart {
+            transform: scale(1);
+            transition: all 0.5s cubic-bezier(0, 3, 1, .76);
+        }
+    }
+
+    &__outer-heart {
+        font-size: 1.5rem;
+    }
+
+    &__inner-heart {
+        background: $heart-gradient;
+        background-clip: text;
+        color: transparent;
+        position: absolute;
+        font-size: 1.5rem;
+        right: 0;
+        transform: scale(0);
+        transition: all 0s;
+    }
+}
