@@ -28,25 +28,61 @@
 
 .fonct-section {
     margin: 3rem 1.5rem;
+    box-sizing: border-box;
 
     h2 {
         margin-bottom: 1.5rem;
+    }
+
+    &__layout {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 }
 
 .fonct-step {
     background-color: rgb(248, 248, 248);
+    box-sizing: border-box;
+    width: 100%;
+    height: 4rem;
     border-radius: 1rem;
     margin-left: 0.7rem;
     margin-bottom: 1rem;
-    padding: 1.5rem;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     box-shadow: $box-shadow-light;
+
+    @include tablette {
+        overflow: hidden;
+    }
+
+    @include desktop {
+        width: 31%;
+    }
 
     &__num {
         @include fonct-num-step;
+
+        @include tablette {
+            position: static;
+            border-radius: 0%;
+            height: 100%;
+            width: 2rem;
+
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        transform: translateX(-7rem);
+
+        @include tablette {
+            transform: translateX(-5rem);
+        }
     }
 
     &__txt {
@@ -66,10 +102,27 @@
 
 .rest-section {
     padding: 3rem 1.5rem;
+    width: 100%;
     background-color: rgb(248, 248, 248);
+    box-sizing: border-box;
 
     h2 {
         margin-bottom: 1.5rem;
+    }
+
+    &__layout {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        a {
+            width: 100%;
+
+            @include tablette {
+                width: 48%;
+            }
+        }
     }
 }
 
@@ -88,6 +141,10 @@
         height: 170px;
         position: relative;
         overflow: hidden;
+
+        @include desktop {
+            height: 220px;
+        }
 
         img {
             width: 100%;
@@ -108,6 +165,8 @@
             right: 10px;
             top: 10px;
         }
+
+
     }
 
     &__bottom {

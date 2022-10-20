@@ -1,5 +1,6 @@
-@import "./utils/variables";
+@import "./utils/breakpoints";
 @import "./utils/mixin";
+@import "./utils/variables";
 
 @import "./base/init";
 
@@ -8,7 +9,7 @@
 
 @import "./components/buttons";
 @import "./components/menu-animation";
-@import "./components/loader-animation";
+// @import "./components/loader-animation";
 
 @import "./pages/index";
 @import "./pages/menus";
