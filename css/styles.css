@@ -186,6 +186,12 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@media screen and (min-width: 1500px) {
+  .fonct-section__sizing {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 .fonct-section h2 {
   margin-bottom: 1.5rem;
 }
@@ -289,6 +295,12 @@ footer {
   background-color: rgb(248, 248, 248);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@media screen and (min-width: 1500px) {
+  .rest-section__sizing {
+    max-width: 1500px;
+    margin: auto;
+  }
 }
 .rest-section h2 {
   margin-bottom: 1.5rem;
