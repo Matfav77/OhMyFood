@@ -1,5 +1,6 @@
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 992px;
+$breakpoint-desktop-menu-layout: 1300px;
 $breakpoint-maxWidth: 1500px;
 
 @mixin tablette {
@@ -10,6 +11,12 @@ $breakpoint-maxWidth: 1500px;
 
 @mixin desktop {
     @media screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-menu-layout {
+    @media screen and (min-width: $breakpoint-desktop-menu-layout) {
         @content;
     }
 }

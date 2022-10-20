@@ -1,28 +1,65 @@
 .rest-main {
     background-color: rgb(248, 248, 248);
+
+    @include tablette {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include desktop-menu-layout {
+        min-height: 90vh;
+        background-color: rgb(248, 248, 248, 0.2);
+    }
+}
+
+.rest-img {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+
+    @include desktop {
+        height: 500px;
+    }
+
+    @include desktop-menu-layout {
+        width: 100vw;
+        min-height: 90vh;
+        position: absolute;
+        z-index: -1;
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include desktop-menu-layout {
+            width: 160%;
+        }
+    }
 }
 
 .menu {
     padding: 2rem 1.5rem;
+    box-sizing: border-box;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     position: relative;
     bottom: 2rem;
     background-color: inherit;
 
+    @include tablette {
+        width: 75%;
+        bottom: 0;
+    }
 
-    &__img {
-        height: 200px;
-        position: relative;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    @include desktop-menu-layout {
+        width: 95%;
+        max-width: $breakpoint-maxWidth;
+        border-radius: 2rem;
     }
 
     &__title {
@@ -63,11 +100,34 @@
         transform: scale(0);
         transition: all 0s;
     }
+
+    &__layout {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        @include desktop-menu-layout {
+            flex-flow: row nowrap;
+        }
+    }
 }
 
 .menu-part {
     width: 100%;
+    box-sizing: border-box;
     margin: 2rem 0;
+
+    @include tablette {
+        width: 100%;
+        background-color: rgb(255, 255, 255, 0.7);
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    @include desktop-menu-layout {
+        width: 31%;
+    }
 
     &__title {
         text-transform: uppercase;
