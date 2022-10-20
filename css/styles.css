@@ -52,6 +52,8 @@ footer {
 
 .footer-layout {
   padding: 1.5rem 1.5rem;
+  max-width: 1500px;
+  margin: auto;
 }
 .footer-layout p {
   font-family: Shrikhand, cursive;
@@ -545,7 +547,7 @@ footer {
 }
 @media screen and (min-width: 1300px) {
   .rest-img img {
-    width: 160%;
+    width: 140%;
   }
 }
 
