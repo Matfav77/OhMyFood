@@ -27,7 +27,11 @@
         <img class="logo" src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood">
     </header>
 
-    <p class="location"><i class="fa-solid fa-location-dot location__icon"></i>Paris, Belleville</p>
+    <div class="location">
+        <label for="location__search"><i class="fa-solid fa-location-dot location__icon"></i></label>
+        <input type="search" class="location__search" id="location__search" value="Paris, Belleville"
+            placeholder="Renseignez la ville ..."></input>
+    </div>
     <div class="explore">
         <h2 class="explore__title">Réservez le menu qui vous convient</h2>
         <p class="explore__txt">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
@@ -64,7 +68,8 @@
                         <div class="rest-card">
                             <div class="rest-card__img"><img
                                     src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.webp"
-                                    alt="Photo de 'La palette du goût'"><span>Nouveau</span></div>
+                                    alt="Photo de 'La palette du goût'"><span class="rest-card__img__new">Nouveau</span>
+                            </div>
                             <div class="rest-card__bottom">
                                 <div class="rest-card__txt">
                                     <h3>La palette du goût</h3>
@@ -79,7 +84,8 @@
                     </a><a href="./pages/noteenchantee.html">
                         <div class="rest-card">
                             <div class="rest-card__img"><img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.webp"
-                                    alt="Photo de 'La note enchantée'"><span>Nouveau</span></div>
+                                    alt="Photo de 'La note enchantée'"><span class="rest-card__img__new">Nouveau</span>
+                            </div>
                             <div class="rest-card__bottom">
                                 <div class="rest-card__txt">
                                     <h3>La note enchantée</h3>
